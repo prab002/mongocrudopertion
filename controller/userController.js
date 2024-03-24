@@ -53,7 +53,7 @@ export const update = async (req, res) => {
     const updateData = await User.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    res.status(200).json(updateData);
+    res.status(200).json({msg:"user updatd"});
   } catch (err) {
     res.status(500).json({ error: err });
   }
